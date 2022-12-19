@@ -21,5 +21,8 @@ export class Marker {
   imageUrl: string;
 
   @Column('varchar')
+  qrCode: string;
+
+  @Column('varchar')
   url: string;
 }
