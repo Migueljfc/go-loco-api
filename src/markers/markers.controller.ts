@@ -3,14 +3,14 @@ import { MarkersService } from './markers.service';
 
 @Controller('markers')
 export class MarkersController {
-    constructor(private markersService : MarkersService){}
-    @Get(':key')
-    markers(@Param() params){
-        return this.markersService.getMarkers(params.key);
-    }
+  constructor(private markersService: MarkersService) {}
+  @Get(':key')
+  markers(@Param() params) {
+    return this.markersService.getMarkers(params.key);
+  }
 
-    @Put(':qrcode')
-    updateMarker(@Param() params){
-        return this.markersService.getMarkers(params.qrcode);
-    }
+  @Put(':qrcode')
+  updateMarker(@Param() params) {
+    return this.markersService.updateMarker(params.qrcode);
+  }
 }
