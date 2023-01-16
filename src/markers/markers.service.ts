@@ -10,6 +10,10 @@ export class MarkersService {
     private markersRepository: Repository<Marker>,
   ) {}
 
+  async updateMarker(qrCode: string) {
+    await this.markersRepository.update({ qrCode }, { status: true });
+  }
+
   getMarkers(key: string) {
     return this.markersRepository.find();
     return [
